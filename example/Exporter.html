@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRCOBJ Exporter</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r124/build/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.1/src/vendor/draco_encoder.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.1/src/vendor/draco_exporter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.1/src/js/drcobj_exporter.min.js"></script>
+
+    <script src="./utils.js"></script>
+
+    <script>
+
+        (new THREE.ObjectLoader()).load("bunny.json", function (object) {
+
+            var buffer = (new THREE.DrcobjExporter()).parse(object.toJSON());
+
+            saveArrayBuffer(buffer, "bunny.drcobj");
+
+        });
+
+    </script>
+
+</body>
+
+</html>

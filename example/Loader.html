@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRCOBJ Loader</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r124/build/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/vendor/draco_decoder.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/vendor/draco_loader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/js/drcobj_loader.min.js"></script>
+
+    <script>
+
+        var drcobjLoader = new THREE.DrcobjLoader();
+
+        drcobjLoader.setDecoderPath("https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/vendor/");
+
+        drcobjLoader.load("bunny.drcobj", function (object) {
+
+            console.log(object);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
