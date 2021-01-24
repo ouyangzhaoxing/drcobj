@@ -1,4 +1,4 @@
-# ![logo](https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/logo.png) Draco 3D Object
+![drcobj](https://socialify.git.ci/ouyangzhaoxing/drcobj/image?description=1&font=Inter&language=1&logo=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fouyangzhaoxing%2Fdrcobj%40master%2Flogo.png&owner=1&pattern=Charlie%20Brown&theme=Light)
 
 ![releases](https://img.shields.io/badge/releases-1.1.1-blue.svg?style=flat-square)
 ![license](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)
