@@ -1,0 +1,37 @@
+{
+  "name": "drcobj",
+  "author": "blinking",
+  "description": "Use draco to compress and decompress threejs-object files.",
+  "homepage": "https://github.com/ouyangzhaoxing/drcobj#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouyangzhaoxing/drcobj.git"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "bugs": {
+    "url": "https://github.com/ouyangzhaoxing/drcobj/issues"
+  },
+  "keywords": [
+    "threejs",
+    "three-js",
+    "model",
+    "threejs-model",
+    "model-format",
+    "game-model",
+    "model-loader",
+    "draco",
+    "draco3d",
+    "draco-threejs",
+    "3d",
+    "html-3d",
+    "html-canvas",
+    "html5-game"
+  ],
+  "dependencies": {
+    "three": "^0.113.0"
+  },
+  "license": "MIT",
+  "version": "1.1.2"
+}

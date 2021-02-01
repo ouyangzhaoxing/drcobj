@@ -1,18 +1,18 @@
-### [简体中文](https://github.com/ouyangzhaoxing/drcobj/blob/master/README_CN.md)
+### [English](https://github.com/ouyangzhaoxing/drcobj/blob/master/README.md)
 
-Draco is an open-source library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics.
+Draco是一个用于压缩和解压缩3D几何网格和点云的开源库。它旨在改善3D图形的存储和传输。
 
-You can use **drcobj_exporter.js** to convert a threejs-object (.json) file to a draco-compressed threejs-object (.drcobj) file, **drcobj_loader.js** is the loader for the drcobj file.
+你可以使用 **drcobj_exporter.js** 将 threejs-object (.json) 文件转换为 draco 压缩的 threejs-object (.drcobj) 文件， **drcobj_loader.js** 是 drcobj 文件的加载器。
 
 ---
 
-## New Version!
+## 新版本！
 
-**Compared with version 1.0.3.2, version 1.1.x reduces model loading time by more than 50%!**
+**相比1.0.3.2版本，1.1.x版本加载模型时间减少50%以上！**
 
-## Model file size comparison
+## 模型文件尺寸比较
 
-**Test Model:** ./example/bunny.json
+**测试模型：** ./example/bunny.json
 
 | JSON | DRCOBJ | FBX | OBJ | GLTF | GLB |
 | --- | --- | --- | --- | --- | --- |
@@ -20,9 +20,9 @@ You can use **drcobj_exporter.js** to convert a threejs-object (.json) file to a
 
 ---
 
-## How to use
+## 如何使用
 
-### Load model
+### 加载模型
 
 ```html
 <script src="./three.js"></script>
@@ -41,14 +41,14 @@ drcobjLoader.load("model.drcobj", function (object) {
 
     scene.add(object);
 
-    drcobjLoader.dispose(); // If you no longer need...
+    drcobjLoader.dispose(); // 如果你不再需要...
 
 });
 
 </script>
 ```
 
-### Conversion model
+### 转换模型
 
 ```html
 <script src="./src/vendor/draco_encoder.js"></script>
@@ -61,9 +61,9 @@ drcobjLoader.load("model.drcobj", function (object) {
 (new THREE.DrcobjExporter()).parse(three_object_json);
 ```
 
-### If Use Zlib
+### 如果使用压缩
 
-Normally there is no need to compress data, unless the model has built-in textures.
+一般情况下不必压缩数据，除非模型内置纹理。
 
 ```html
 <!-- https://github.com/imaya/zlib.js -->
@@ -78,5 +78,5 @@ drcobjLoader.load("model.drcobj", function (object) {...}, undefined, undefined,
 
 ---
 
-## License
+## 许可证
 #### [MIT License](https://github.com/ouyangzhaoxing/drcobj/blob/master/LICENSE)
