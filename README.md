@@ -30,11 +30,11 @@ You can use **drcobj_exporter.js** to convert a threejs-object (.json) file to a
 ### Load model
 
 ```html
-<script src="./three.min.js"></script>
+<script src="./three.js"></script>
 
 <script src="./src/vendor/draco_decoder.js"></script>
-<script src="./src/vendor/draco_loader.min.js"></script>
-<script src="./src/js/drcobj_loader.min.js"></script>
+<script src="./src/vendor/draco_loader.js"></script>
+<script src="./src/drcobj_loader.js"></script>
 
 <script>
 
@@ -58,8 +58,8 @@ drcobjLoader.load("model.drcobj", function (object) {
 
 ```html
 <script src="./src/vendor/draco_encoder.js"></script>
-<script src="./src/vendor/draco_exporter.min.js"></script>
-<script src="./src/js/drcobj_exporter.min.js"></script>
+<script src="./src/vendor/draco_exporter.js"></script>
+<script src="./src/drcobj_exporter.js"></script>
 ```
 
 ```javascript
