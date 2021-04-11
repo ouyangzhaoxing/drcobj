@@ -9,17 +9,16 @@
 
 <body>
 
-    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r124/build/three.min.js"></script>
+    <script src="../src/vendor/draco_decoder.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/vendor/draco_decoder.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/vendor/draco_loader.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/js/drcobj_loader.min.js"></script>
+    <script type="module">
 
-    <script>
+        import * as THREE from "../node_modules/three/build/three.module.js";
+        import { DrcobjLoader } from "../src/drcobj_loader.module.js";
 
-        var drcobjLoader = new THREE.DrcobjLoader();
+        let drcobjLoader = new DrcobjLoader();
 
-        drcobjLoader.setDecoderPath("https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.0/src/vendor/");
+        drcobjLoader.setDecoderPath("../src/vendor/");
 
         drcobjLoader.load("bunny.drcobj", function (object) {
 

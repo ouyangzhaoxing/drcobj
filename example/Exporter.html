@@ -9,19 +9,17 @@
 
 <body>
 
-    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r124/build/three.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.1/src/vendor/draco_encoder.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.1/src/vendor/draco_exporter.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Ouyang-Zhaoxing/drcobj@1.1.1/src/js/drcobj_exporter.min.js"></script>
-
     <script src="./utils.js"></script>
+    <script src="../src/vendor/draco_encoder.js"></script>
 
-    <script>
+    <script type="module">
+
+        import * as THREE from "../node_modules/three/build/three.module.js";
+        import { DrcobjExporter } from "../src/drcobj_exporter.module.js";
 
         (new THREE.ObjectLoader()).load("bunny.json", function (object) {
 
-            var buffer = (new THREE.DrcobjExporter()).parse(object.toJSON());
+            let buffer = (new DrcobjExporter()).parse(object.toJSON());
 
             saveArrayBuffer(buffer, "bunny.drcobj");
 
