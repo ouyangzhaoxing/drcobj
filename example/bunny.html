@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunny - Drcobj Test</title>
+
+  <style> body { margin: 0; } </style>
+
+</head>
+
+<body>
+
+  <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r126/build/three.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/src/vendor/draco_decoder.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/src/vendor/draco_loader.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/src/drcobj_loader.js"></script>
+
+  <script>
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0xFFFFFF);
+    document.body.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = -5;
+    camera.lookAt(scene.position);
+
+    const light = new THREE.DirectionalLight(0xFFFFFF);
+    scene.add(light);
+    light.target = scene;
+
+    var bunny, drcobjLoader = new THREE.DrcobjLoader();
+    drcobjLoader.setDecoderPath("https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/src/vendor/");
+    drcobjLoader.load("https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/example/bunny.drcobj", function (object) {
+      bunny = object;
+      bunny.position.y = -1;
+      bunny.scale.set(10, 10, 10);
+      scene.add(bunny);
+      drcobjLoader.dispose();
+    });
+
+    const animate = function () {
+      requestAnimationFrame(animate);
+      if (bunny !== undefined) { bunny.rotation.y += 0.01; }
+      renderer.render(scene, camera);
+    };
+
+    animate();
+
+  </script>
+
+</body>
+
+</html>
