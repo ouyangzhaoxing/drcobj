@@ -1,3 +1,6 @@
+[![npm](https://img.shields.io/badge/npm-1.1.3-orange.svg?style=flat-square)](https://www.npmjs.com/package/drcobj)
+[![license](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://github.com/ouyangzhaoxing/drcobj/blob/master/LICENSE)
+
 ### [简体中文](https://github.com/ouyangzhaoxing/drcobj/blob/master/README_CN.md)
 
 Draco is an open-source library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics.
@@ -23,6 +26,8 @@ You can use **drcobj_exporter.js** to convert a threejs-object (.json) file to a
 ## How to use
 
 ### Load model
+
+Example: https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/example/bunny.html
 
 ```html
 <script src="./three.js"></script>

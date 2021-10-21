@@ -1,3 +1,6 @@
+[![npm](https://img.shields.io/badge/npm-1.1.3-orange.svg?style=flat-square)](https://www.npmjs.com/package/drcobj)
+[![license](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://github.com/ouyangzhaoxing/drcobj/blob/master/LICENSE)
+
 ### [English](https://github.com/ouyangzhaoxing/drcobj/blob/master/README.md)
 
 Draco是一个用于压缩和解压缩3D几何网格和点云的开源库。它旨在改善3D图形的存储和传输。
@@ -23,6 +26,8 @@ Draco是一个用于压缩和解压缩3D几何网格和点云的开源库。它�
 ## 如何使用
 
 ### 加载模型
+
+示例: https://cdn.jsdelivr.net/gh/ouyangzhaoxing/drcobj@master/example/bunny.html
 
 ```html
 <script src="./three.js"></script>
